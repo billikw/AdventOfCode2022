@@ -1,5 +1,7 @@
 // Day 1 (part 1)
-const input = []; // Array.from($0.innerHTML.split("\n"));
+const input = Array.from(
+  document.getElementsByTagName("pre")[0].innerHTML.split("\n")
+);
 let elvesCalories = [];
 
 countCalories = (source) => {
@@ -24,4 +26,6 @@ findLargest = (source) => {
   return largest;
 };
 
+countCalories(input);
+findLargest(elvesCalories);
 // Day 1 (part 1) answer: 68292
