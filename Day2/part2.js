@@ -112,4 +112,4 @@ playGame = (source) => {
 setOutcome(input);
 playGame(inputWithDesiredOutcome);
 console.log(`The scores are - Elf: ${scores.elf} vs Human: ${scores.human}`);
-// Day 2 (part 1) answer: 15422
+// Day 2 (part 2) answer: 15422
