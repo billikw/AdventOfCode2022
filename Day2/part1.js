@@ -44,42 +44,27 @@ playGame = (source) => {
     /* Game logic */
     /* Rock */
     if (elfMove === "Rock") {
-      if (humanMove === "Scissors") {
-        elfPoints += result.win;
-      } else {
-        if (humanMove === "Rock") {
-          elfPoints += result.draw;
-          humanPoints += result.draw;
-        } else {
-          humanPoints += result.win;
-        }
-      }
+      humanMove === "Scissors"
+        ? (elfPoints += result.win)
+        : humanMove === "Rock"
+        ? ((elfPoints += result.draw), (humanPoints += result.draw))
+        : (humanPoints += result.win);
     }
     /* Scissors */
     if (elfMove === "Scissors") {
-      if (humanMove === "Paper") {
-        elfPoints += result.win;
-      } else {
-        if (humanMove === "Scissors") {
-          elfPoints += result.draw;
-          humanPoints += result.draw;
-        } else {
-          humanPoints += result.win;
-        }
-      }
+      humanMove === "Paper"
+        ? (elfPoints += result.win)
+        : humanMove === "Scissors"
+        ? ((elfPoints += result.draw), (humanPoints += result.draw))
+        : (humanPoints += result.win);
     }
     /* Paper */
     if (elfMove === "Paper") {
-      if (humanMove === "Rock") {
-        elfPoints += result.win;
-      } else {
-        if (humanMove === "Paper") {
-          elfPoints += result.draw;
-          humanPoints += result.draw;
-        } else {
-          humanPoints += result.win;
-        }
-      }
+      humanMove === "Rock"
+        ? (elfPoints += result.win)
+        : humanMove === "Paper"
+        ? ((elfPoints += result.draw), (humanPoints += result.draw))
+        : (humanPoints += result.win);
     }
   }
   scores.elf = elfPoints;
