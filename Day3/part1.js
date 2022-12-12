@@ -8,9 +8,8 @@ const duplicatedItems = [];
 
 function checkForDuplicates(bag) {
   const splitBag = [];
-  const arr = Array.from(bag);
 
-  arr.map((string) => {
+  bag.map((string) => {
     splitBag.push([
       string.slice(0, string.length / 2),
       string.slice(string.length / 2),
